@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+C:\Users\USER\OneDrive\Área de Trabalho\tudo\Cínica\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-743837615.index
-1459952180.index
-406640364.index
-3082817884.index
-298226988.index
-1014624626.index
-1550065730.index
