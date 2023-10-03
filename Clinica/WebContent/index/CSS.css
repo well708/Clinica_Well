@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Inter:wght@300&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+background: url(Imgs/img4.jpg) no-repeat;
+background-size: cover;
+background-position: top; 
+}
+.img3{
+width: 100%; /* Defina a largura desejada para a imagem */
+height: 50rem ; /* Defina a altura desejada para a imagem */
+object-fit: cover; /* Para garantir que a imagem ocupe todo o espaço do container */
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1; /* Coloca a imagem em segundo plano (atrás de tudo) */
+}
+.logo{
+position: absolute;
+left: 0;
+top: -12px;
+width: 50%;
+}
+.txt-agenda {    
+font-family: Boogaloo;
+font-size: 40px;
+color: white;
+}
+.texto {
+position: absolute;
+left: 20px;
+top: 50%; /* A partir do meio da tela verticalmente */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.button-agenda{
+width: 300px;
+height: 50px;
+background: #1E90FF;
+border: 2px solid #fff;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1.3rem;
+color: #fff;
+font-weight: 500;
+margin-left: 40px;
+transition: .5s;
+}
+.button-agenda:hover{
+transform: scale(.96);
+}
+/* Estilos para o ícone do menu Hambúrguerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+.hamburger-menu {
+display:none ;
+cursor: pointer;
+}
+header {/* menu */  
+position: absolute;
+top:2px; 
+right: 0; /* Adiciona o posicionamento do elemento à direita da página */
+padding:4px 20px;
+display: flex;
+justify-content: flex-end; /* Altera o alinhamento para a direita */
+transition: height 1s ease;
+}
+.menu-list{
+list-style:none;
+display:flex;
+align-items: center;
+}
+.nav-menu a{
+position: relative;
+font-size: 1.3rem;
+color: #ffffff;
+text-decoration: none;
+font-family: Inter;
+margin-left: 40px;
+}
+.nav-menu a::after{
+content: '';
+position: absolute;
+left: 0;
+bottom: -6px;
+width: 100%;
+height: 3px; 
+background: #1E90FF;
+border-radius: 5px;
+transform-origin: right;
+transform: scaleX(0);
+transition: transform .5s; 
+}
+.nav-menu a:hover::after{
+transform-origin: left;
+transform:scaleX(1);
+}
+.nav-menu .btnLogin-popup{
+width: 130px;
+height: 50px;
+background: transparent;
+border: 2px solid #fff;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1.3rem;
+color: #fff;
+font-weight: 500;
+margin-left: 40px;
+transition: .5s;
+}
+.nav-menu .btnLogin-popup:hover{
+background: #1E90FF;
+border: 2px solid #fff;
+}
+@media (max-width:850px) {
+.logo{
+position: absolute;
+top: 1px;
+width:80%;
+}
+.texto{
+left:0;
+}
+.hamburger-menu {
+display: flex;
+color: #ffffff;
+margin-top: 20px; 
+cursor: pointer; 
+}
+.hamburger-menu:hover{
+color: #1E90FF;
+}
+.menu-list.show {
+background: rgba(215, 215, 215, 0.556);
+display:flex; 
+flex-direction: column;
+align-content: space-between;
+position: absolute;
+}
+.menu-list {
+display: none;
+position: absolute;
+top: 46px;
+right: 2px;
+border-radius: 5px;
+padding: 10px;
+z-index: 1;
+}
+.menu-list li {
+margin: 4px ;
+}
+
+}
+.box-modal {
+    margin-top:  -10.5%;
+    margin-left:auto;
+    margin-bottom: 30px;
+}
+/* Estilos do modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-content {
+background-color: #fff;
+margin: 10% auto;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+max-width: 500px;
+width: 80%;
+}
+.close {
+color: #1e1d1d;
+float: right;
+font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+}
+.close:hover {
+color: #525151;
+}
+form {
+display: flex;
+flex-direction: column;
+}
+input, .button-modal {
+margin-bottom: 15px;
+padding: 12px;
+border: 2px solid #868686;
+border-radius: 5px;
+outline: none;
+transition: border-color 0.3s;
+font-size: 16px;
+}
+input:hover {
+border-color: #1e8fffa5;
+}
+.button-modal {
+padding: 12px;
+background-color: #1E90FF;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-weight: 600;
+transition: background-color 0.3s;
+}
+.button-modal:hover {
+background-color: #75aade;
+}
+.container {
+text-align: center;
+padding: 20px;
+}
+.container h1 {
+font-size: 28px;
+margin-bottom: 10px;
+color: #1E90FF;
+}
+.container h2 {
+font-size: 18px;
+margin-top: 6px;
+margin-bottom: 6px;
+color: #555;
+}
+.register {
+color: #1E90FF;
+cursor: pointer;
+text-decoration: underline;
+}
+
+/* segunda parte do site. corpo após o titulo  */
+.segunda-parte{
+margin-top: 50.5rem;
+}
+.container-titulo-1{
+display: flex;
+align-items: center;
+}
+#h1-segunda-parte{
+text-align:left;
+padding:10px;
+margin-top:0;
+font-family: Boogaloo;
+font-size: 40px;
+color:black;
+}
+#p-segunda-parte{
+margin-left: 20px;
+text-align: justify;
+max-width: 800px;
+font-family: Inter;
+font-size:24px;
+}
+#imagem-titulo-1{
+width: 40%;
+left: 20px;     
+margin-bottom: 10px;
+}
+@media (max-width: 850px) {
+.container-titulo-1{
+display: flex;
+flex-direction: column;
+}
+#p-segunda-parte{
+margin-left: 20px;
+margin-right:20px ;
+}
+#imagem-titulo-1{
+margin-top: px;
+width: 70%;
+}
+}
+/* Responsividade */
+@media (max-width: 850px) {
+.modal-content {
+margin: 5% auto;
+width: 90%;
+}
+.modal-title {
+font-size: 24px;
+}
+.container h1 {
+font-size: 24px;
+}
+
+}
+/* terceira parte do siteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee */
+article{
+margin-top: 80rem;
+}
+.container-titulo-2 {
+background-color: #6e6e6e;
+margin-bottom: 40px;
+padding:20px;
+}
+.container-box {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap; /* Para lidar com quebras de linha */
+
+}
+.box {
+background-color: #fff;
+text-align: center;
+font-family: Inter;
+padding: 40px;
+margin: 0;
+flex-basis: calc(20% - 20px); /* Para ocupar metade da largura e descontar margens */
+box-sizing: border-box; /* Para incluir borda e padding na largura total */
+transition: calc(0.6s);
+
+}
+.box:hover{
+transform: scale(1.03); /* Escala a imagem em 1,03 quando passamos por cima dela*/
+cursor: pointer;
+}
+#titulo-segunda-parte {
+text-align: center;
+margin-bottom: 60px;
+font-family: Boogaloo;
+font-size: 40px;
+color:rgb(255, 255, 255);
+}
+.imagem-box {
+width: 50%;
+max-width: 100px; /* Limitar a largura da imagem */
+margin: 10px auto;
+display: block;
+}
+@media screen and (max-width: 768px) {
+article {
+margin-top: 98rem;
+}
+.container-box {
+flex-direction: column;
+align-items: stretch;
+}
+.box {
+flex-basis: 100%;
+margin: 10px 0;
+}
+}
+#end-da-terceira-parte{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#p-terceira-parte{
+color: #ffffff;
+text-align: center;
+max-width: 100%;
+font-family: Inter;
+font-size:24px;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+#button-segunda-parte{
+width: 300px;
+height: 50px;
+background: #1E90FF;
+border: 2px solid #fff;
+border-radius: 6px;
+cursor: pointer;
+font-size: 1.3rem;
+color: #fff;
+font-weight: 500;
+margin-left: 40px;
+transition: .5s;    
+}
+#button-segunda-parte:hover{
+    transform: scale(.9);    
+}
+/* Estilos do  footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+footer {
+background-color: #000000c8;
+color: #ffffff;
+padding: 0 0;
+position: absolute;
+width: 100%;
+}
+.footer-menu a:hover{
+color: #1E90FF;
+}
+.footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 0;
+}
+.footer-logo img {
+width: 200px; 
+}
+.footer-links ul {
+list-style: none;
+}
+.footer-links li {
+margin-bottom: 10px;
+}
+.footer-links a {
+color: #ffffff;
+text-decoration: none;
+font-family: 'Inter', sans-serif;
+}
+.footer-contact p {
+margin-bottom: 5px;
+}
+.footer-bottom {
+background-color: #1E90FF;
+text-align: center;
+padding: 10px 0;
+font-size: 14px;
+font-family: 'Inter', sans-serif;
+}
+.social-icons {
+margin-top: 10px;
+}
+.social-icons a:hover {
+color: #1E90FF;
+}
+.icon {
+font-size: 24px;
+margin-right: 10px;
+color: #ffffff;
+text-decoration: none;
+}
+/* Media query for footer responsiveness */
+@media (max-width: 850px) {
+.footer-content {
+flex-direction: column;
+align-items: center;
+}
+.footer-logo .img-logo{
+width: 200px;
+}
+}

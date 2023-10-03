@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Clíca Santos</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="CSS.css">
+      <script src="script.js"></script>
+   </head>
+   <body>
+      <header>
+         <nav class="nav-menu">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+               <span class="material-icons  controla">reorder</span>
+            </div>
+            <ul class="menu-list">
+               <li><a href="#">Clínica</a></li>
+               <li><a href="#">Sobre nós</a></li>
+               <li><a href="#">Contatos</a></li>
+               <li><a href="#">Serviços</a></li>
+               <li><button class="btnLogin-popup" onclick="openModalEntrar()">Login</button></li>
+            </ul>
+         </nav>
+      </header>
+      <div class="logo">
+         <img class="logo" src="imgs/Logo_Clínica-removebg-preview.png">
+      </div>
+      <section>
+         <img class="img3" src="imgs/img3.jpg" alt="Img3">
+         <div class="texto">
+            <h1 class="txt-agenda">AGENDE AGORA O SEU EXAME PELO AGENDAMENTO ON-LINE </h1>
+            <button class="button-agenda">Agende agora</button>
+         </div>
+      </section>
+      <div id="entrar" class="modal">
+         <!-- modal entrar -->
+         <div class="modal-content">
+            <span class="close" onclick="closeModal_entrar()">&times;</span>
+            <div class="container">
+               <h1>Entrar</h1>
+               <h2>Curando patinhas e corações: nossa clínica veterinária é o lar do cuidado e amor.</h2>
+            </div>
+            <form action="../User/Entrar.jsp" method="post">
+               <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+               <input type="password" name="senha_entrar" id="senha_entrar" placeholder="Digite uma senha" required> <!-- visibilidade de senha entrar -->
+               <label id="mostrar_senha_entrar" class="box-modal" onclick="exibirSenhaEntrar()">🔒</label>
+               <button type="submit" class="button-modal">Acessar</button>
+               <p>Faça seu cadastro em: <span class="register" onclick="openModalCadastrar(), closeModal_entrar()">Cadastrar</span></p>
+            </form>
+         </div>
+      </div>
+      <!-- modal cadastrar -->
+      <div id="cadastrar" class="modal">
+         
+         <div class="modal-content">
+            <span class="close" onclick="closeModal_cadastrar()">&times;</span>
+            <div class="container">
+               <h1>Cadastre-se</h1>
+               <h2>Curando patinhas e corações: nossa clínica veterinária é o lar do cuidado e amor.</h2>
+            </div>
+            <form action="../User/Cadastrar.jsp" method="post">
+               <input type="text" name="nome" id="nome" placeholder="Seu primeiro nome" required>
+               <input type="email" name="email" id="email" placeholder="Seu e-mail" required> 
+               <input type="password" name="senha_cadastrar" id="senha_cadastrar" placeholder="Digite uma senha" required> <!-- visibilidade de senha cadastrar -->
+               <label id="mostrar_senha_cadastrar" class="box-modal" onclick="exibirSenhaCadastro()">🔒</label>
+               <button type="submit" class="button-modal">Cadastrar</button>
+               <p>Já possui uma conta: <span class="register" onclick="openModalEntrar(), closeModal_cadastrar()">Acessar  </span></p>
+            </form>
+         </div>
+      </div>
+      <!-- segunda parte do site. corpo após o tituloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+      <header class="segunda-parte">
+         <div class="container-titulo-1">
+            <div>
+               <h1 id="h1-segunda-parte">Cirurgiões Veterinários para cães e gatos em Belém do Pará</h1>
+               <p id="p-segunda-parte">O centro cirúrgico da Clínica Santos possui os materiais e equipamentos necessários para realizar um procedimento seguro e com a mais alta qualidade, além de que contamos com uma médica veterinária especializada em cirurgia de tecidos moles.
+                  <br><br>
+                  As indicações de cirurgias são variadas, no entanto, as mais realizadas são as castrações seguidas da mastectomia e das cirurgias oculares e abdominais.
+               </p>
+            </div>
+            <img id="imagem-titulo-1" src="imgs/img1.jpg" alt="imagem-de-cachorro">
+         </div>
+      </header>
+      <!-- terceira parte do siteeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+      <article>
+         <div class="container-titulo-2">
+            <h1 id="titulo-segunda-parte">Serviços Veterinarios</h1>
+            <div class="container-box">
+               <div class="box">
+                  <img class="imagem-box" src="imgs/icon-Cirurgias.png" alt="immagem-de-fisio">
+                  <p>Fisioterapia veterinária</p>
+                  <br>
+                  <p>Cirurgias de segurança com uma equipe especializada. Cirurgias veterinárias em Belém.</p>
+               </div>
+               <div class="box">
+                  <img class="imagem-box" src="imgs/icon-fisio.png" alt="immagem-de-fisio">
+                  <p>Fisioterapia veterinária</p>
+                  <br>
+                  <p>Fisioterapia para animais de todos os portes. Fisioterapia animal em Belém.</p>
+               </div>
+               <div class="box">
+                  <img class="imagem-box" src="imgs/icon-exame.png" alt="immagem-de-exame">
+                  <p>Exames</p>
+                  <br>
+                  <p>Exames de sangue e exames laboratoriais. Exames médicos em Belém.</p>
+               </div>
+               <div class="box">
+                  <img class="imagem-box" src="imgs/icon-consulta.png" alt="immagem-de-fisio">
+                  <p>Consultas</p>
+                  <br>
+                  <p>Agende sua consulta com um médico especializado. Consultas médicas em Belém.</p>
+               </div>
+            </div>
+            <br>
+            <div id="end-da-terceira-parte">
+              <p id="p-terceira-parte">Nossa clínica veterinária oferece serviços de qualidade com preços acessíveis. Consultas e exames em diversas especialidades. Conheça a nossa clínica em Belém.</p>
+            <button id="button-segunda-parte">Sobre a Clínica</button>
+           </div>
+         </div>
+      </article>
+      <!-- fooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooter -->
+      <footer>
+         <div class="footer-content">
+            <div class="footer-logo">
+               <img  class="img-logo" src="imgs/Logo_Clínica-removebg-preview.png" alt="Logo da Clínica">
+            </div>
+            <div class="footer-links">
+               <ul class="footer-menu">
+                  <li><a href="#">Termos de Uso</a></li>
+                  <li><a href="#">Política de Privacidade</a></li>
+                  <li><a href="#">Mapa do Site</a></li>
+               </ul>
+            </div>
+            <div class="footer-contact">
+               <p>Entre em contato:</p>
+               <p>Telefone: (91) 94002-8922</p>
+               <p>Email: contato@clinicasantos.com</p>
+            </div>
+            <div class="social-icons">
+               <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+               <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+               <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+               <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+               <a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+               <a href="#" class="icon"><i class="fab fa-github"></i></a>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <p>&copy; 2023 Clínica Santos. Todos os direitos reservados.</p>
+         </div>
+      </footer>
+      
+   </body>
+</html>

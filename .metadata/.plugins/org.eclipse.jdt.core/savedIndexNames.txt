@@ -1,0 +1,9 @@
+INDEX VERSION 1.132+C:\Users\USER\OneDrive\Área de Trabalho\tudo\Cínica\.metadata\.plugins\org.eclipse.jdt.core
+3939481733.index
+298226988.index
+3696316056.index
+2058175128.index
+1852522039.index
+1865797976.index
+1560493055.index
+3652626494.index
